@@ -1,0 +1,31 @@
+From ebb03d26eaf1cc126bddc095fc3cc69a2b5fb2cf Mon Sep 17 00:00:00 2001
+From: Prashant <pkardam@iitk.ac.in>
+Date: Sun, 4 Mar 2018 17:56:14 +0530
+Subject: [PATCH 1/1] 2nd feature
+
+---
+ hello.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/hello.c b/hello.c
+index 11b70d7..67f478b 100644
+--- a/hello.c
++++ b/hello.c
+@@ -1,5 +1,13 @@
+ #include<stdio.h>
+ 
++void microkernel_sendmsg(char *);
++
+ void main(){
+-printf("Helloworld!\n");
++	printf("Helloworld!\n");
++	microkernel_sendmsg("is more
++	portable");
++}
++
++void microkernel_sendmsg(char *a){
++	printf("microkernel: %s\n", a);
+ }
+-- 
+2.7.4
+
